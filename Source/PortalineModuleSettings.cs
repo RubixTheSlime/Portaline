@@ -8,6 +8,10 @@ public class PortalineModuleSettings : EverestModuleSettings {
   [SettingSubText("PORTALINE_SETTINGS_OVERRIDE_HINT")]
   public bool PortalGunOverrideEnable { get; set; } = false;
 
+  [SettingName("PORTALINE_SETTINGS_MOUSE_BUTTONS")]
+  [SettingSubText("PORTALINE_SETTINGS_MOUSE_BUTTONS_HINT")]
+  public bool PortalUseMouseButtons { get; set; } = true;
+
   [DefaultButtonBinding(Buttons.LeftShoulder, Keys.O)]
   public ButtonBinding ShootBluePortal { get; set; }
 

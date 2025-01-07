@@ -7,7 +7,11 @@ PORTALINE_SETTINGS_OVERRIDE=
 PORTALINE_SETTINGS_OVERRIDE_HINT=
   By default, the portal gun is disabled upon entering a level.
   If you set this to ON, the portal gun will always be enabled.
-  -----
-  Note: In addition to the keyboard and joystick settings below,
+
+PORTALINE_SETTINGS_MOUSE_BUTTONS=
+  Use Mouse Buttons
+
+PORTALINE_SETTINGS_MOUSE_BUTTONS_HINT=
+  If enabled, in addition to the keyboard and joystick settings below,
   you can also shoot blue portals with the left mouse button,
   and orange portals with the right mouse button.

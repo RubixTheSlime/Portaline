@@ -231,13 +231,13 @@ public class PortalineModule : EverestModule {
     // PortalBullet..ctor() adds itself to the scene on creation
     // so the result is not unused
 #pragma warning disable CA1806 // Do not ignore method results
-    if (Settings.ShootBluePortal.Pressed || MInput.Mouse.PressedLeftButton) {
+    if (Settings.ShootBluePortal.Pressed || (Settings.PortalUseMouseButtons && MInput.Mouse.PressedLeftButton)) {
       self.Facing = (Facings)Math.Sign(ToCursor(self, CursorPos).X);
       if (self.Facing == 0) self.Facing = Facings.Right;
       Audio.Play("event:/sneezingcactus/portal_shoot_blue");
       new PortalBullet(self.Center, ToCursor(self, CursorPos) * 15f, false, self);
     }
-    if (Settings.ShootOrangePortal.Pressed || MInput.Mouse.PressedRightButton) {
+    if (Settings.ShootOrangePortal.Pressed || (Settings.PortalUseMouseButtons && MInput.Mouse.PressedRightButton)) {
       self.Facing = (Facings)Math.Sign(ToCursor(self, CursorPos).X);
       if (self.Facing == 0) self.Facing = Facings.Right;
       Audio.Play("event:/sneezingcactus/portal_shoot_orange");
